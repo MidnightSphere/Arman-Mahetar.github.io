@@ -1,0 +1,441 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+}
+
+.navbar {
+    /* background-color: #f8f9fa; */
+    background-color: white;
+    z-index: 1;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+}
+
+.ms-1 {
+    margin-left: -17px !important;
+    margin-top: -12px !important;
+    max-height: 49px !important;
+}
+
+.ms-2 {
+    margin-top: 4px;
+    margin-left: -30px !important;
+    max-height: 53px !important;
+}
+
+.navbar-nav .nav-link {
+    color: black !important;
+    font-weight: 500;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin: 0 5px;
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: #1404fa !important;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #1404fa !important;
+  }
+  
+  /* .menu-icon {
+    font-size: 1.7rem;
+  } */
+  
+  
+  @media (min-width:992px) {
+    .navbar-nav .nav-link {
+        text-decoration: none;
+        position: relative;
+    }
+  
+    .navbar-nav .nav-item .nav-link::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 0px;
+        height: 5px;
+        background: #1404fa;
+        transition: 0.5s;
+    }
+  
+    .navbar-nav .nav-item:hover .nav-link::before {
+        width: 45%;
+        transform: translateX(60%);
+    }
+  }
+  
+  @media (max-width: 468px) {
+  
+    .navbar-brand {
+        margin-left: -9px;
+    }
+  
+    .ms-2 {
+        margin-left: -50px !important;
+    }
+  }
+  
+  @media (max-width: 768px) {
+  
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 3.5em;
+        z-index: 1000;
+    }
+  
+    .navbar .navbar-brand {
+        gap: 0.5em;
+    }
+  
+    .ms-1 {
+        max-width: 5.5em;
+    }
+  
+    .ms-2 {
+        max-width: 13em;
+    }
+  
+  }
+  
+  @media (max-width: 991.98px) {
+  
+    .navbar-white {
+        background-color: white !important;
+    }
+  
+    .navbar-colored {
+        background-color: #ebf3fe !important;
+    }
+  
+    .navbar-collapse.bg-colored {
+        background-color: #ebf3fe !important;
+    }
+  
+    .navbar-collapse.bg-white {
+        background-color: #ffffffcf !important;
+    }
+  
+    .navbar-nav .nav-link.active {
+        text-decoration: underline;
+    }
+  
+    .navbar-brand,
+    .navbar-nav {
+        justify-content: center;
+    }
+  
+    .navbar-toggler {
+        border: none;
+        background: transparent;
+        font-size: 1.5rem;
+        color: rgb(1, 0, 0);
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+  
+    .navbar-toggler:focus {
+        outline: none;
+        box-shadow: none;
+    }
+  
+    .navbar-nav .nav-link {
+        color: black !important;
+        font-weight: 500;
+        display: block;
+        text-align: center;
+        position: relative;
+        transition: transform 0.3s ease;
+        margin: 0 5px;
+        padding: 10px 0;
+    }
+  
+    .navbar-nav .nav-link:hover {
+        color: #1404fa !important;
+        transform: scale(1.1);
+    }
+  
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        /* background: rgba(255, 255, 255, 0.944); */
+        background-color: #fff;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.178);
+        border-radius: 10px;
+    }
+  }
+  
+
+#our-services {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+}
+
+#our-services h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-bottom: 1em;
+}
+
+#our-services span {
+    color: #1404fa;
+}
+
+@media (max-width:576px) {
+    #our-services .row {
+        gap: 2em;
+    }
+}
+
+.row2 {
+    margin-top: 1em;
+}
+
+@media (max-width:992px) {
+    #our-services h2 {
+        padding-top: 2em;
+    }
+
+    .service-card {
+        background-color: #dedede87;
+    }
+}
+
+/* Glow Card Effect */
+.glow-card{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    --clr:blue;
+}
+
+ .glow-card::before {
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(var(--clr), transparent, transparent);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.5s top 0s left 0s;
+}
+
+ .glow-card:hover::before {
+    opacity: 1;
+}
+
+ .glow-card::after {
+    content: '';
+    position: absolute;
+    inset: 2.5px;
+    background-color: #f6f6f6;
+    border-radius: 8px;
+}
+
+.glow-body{
+    position: relative;
+    z-index: 1;
+}
+
+
+.service-card {
+    background-color: #f6f6f6;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 40%);
+    border: solid 0.5px blue;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1rem;
+}
+
+/* .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+} */
+
+.service-icon {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+.service-card .card-title {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.service-card .card-text {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 32px 20px;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.footer .container {
+    padding-top: 5.5em;
+}
+
+.footer .footer-company-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #f8f9fa;
+}
+
+.footer .footer-description {
+    margin-bottom: 20px;
+    color: #bbb;
+    line-height: 1.5;
+}
+
+.footer .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer .social-icon {
+    display: inline-block;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.footer .social-icon:hover {
+    color: #007bff;
+}
+
+.footer .footer-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #f8f9fa;
+}
+
+.footer .footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer .footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.footer .footer-links a:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+.footer .footer-links a.active {
+    color: #007bff;
+}
+
+.footer .footer-right p {
+    margin-bottom: 10px;
+}
+
+.footer .footer-right p i {
+    padding-right: 1em;
+}
+
+.footer .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #bbb;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer .footer-bottom p {
+    margin-bottom: 0rem;
+}
+
+/* Responsive Design */
+@media (min-width: 992px) {
+    .footer .footer-middle {
+        padding-left: 8em;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer .footer-left,
+    .footer .footer-middle,
+    .footer .footer-right {
+        margin-bottom: 20px;
+    }
+
+    .footer .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer .footer-company-name {
+        font-size: 1.3rem;
+    }
+
+    .footer .footer-title {
+        font-size: 1rem;
+    }
+
+    .footer .social-icon {
+        font-size: 1.2rem;
+    }
+}
+
+.footer .custom-shape-divider-top-1737023059 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.footer .custom-shape-divider-top-1737023059 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 102px;
+    transform: rotateY(180deg);
+}
+
+.footer .custom-shape-divider-top-1737023059 .shape-fill {
+    fill: #FFFFFF;
+}
